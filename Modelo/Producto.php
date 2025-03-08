@@ -1,16 +1,19 @@
 <?php
 class Producto {
-    private $propiedades = [];
-    private $propiedades = [];
-    private $propiedades = [];
-    private $propiedades = [];
+    private $Codigo = [];
+    private $Nombre = [];
+    private $Stock = [];
+    private $ValorUnitario = [];
 
     function __construct($Codigo, $Nombre, $Stock, $ValorUnitario) {
         $this->propiedades = $params;
     }
 
-    public function __set($nombre, $valor) {
-        $this->propiedades[$nombre] = $valor;
+    public function __set($Nombre, $valor) {
+        $this->$Codigo = $Codigo;
+        $this->$Nombre = $Nombre;
+        $this->$Stock = $Stock;
+        $this->$ValorUnitario = $ValorUnitario;
     }
 
     public function __get($nombre) {
