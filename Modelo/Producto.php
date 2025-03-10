@@ -26,7 +26,7 @@ class Producto {
 
     // Método para obtener todas las propiedades
     public function obtenerPropiedades() {
-        return $this->propiedades;
+
     }
 }
 ?>
