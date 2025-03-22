@@ -7,15 +7,15 @@ class Factura {
     private $Cod_PersonaFK;
 
     function __construct($Cod_Factura, $Fecha_Factura, $Nro_Factura, $Total_Factura, $Cod_PersonaFK) {
-        $this->$Cod_Factura = $Cod_Factura;
-        $this->$Fecha_Factura = $Fecha_Factura;
-        $this->$Nro_Factura = $Nro_Factura;
-        $this->$Total_Factura = $Total_Factura; 
-        $this->$Cod_PersonaFK = $Cod_PersonaFK;    
+        $this->Cod_Factura = $Cod_Factura;
+        $this->Fecha_Factura = $Fecha_Factura;
+        $this->Nro_Factura = $Nro_Factura;
+        $this->Total_Factura = $Total_Factura; 
+        $this->Cod_PersonaFK = $Cod_PersonaFK;    
     }
     #region SetGetCodigo
     function setCod_Factura ($Cod_Factura){
-        $this->$Cod_Factura;
+        $this->Cod_Factura;
     }
 
     function getCod_Factura(){
@@ -25,7 +25,7 @@ class Factura {
 
     #region SetGetFecha
     function setFecha_Factura ($Fecha_Factura){
-        $this->$Fecha_Factura;
+        $this->Fecha_Factura;
     }
 
     function getFecha_Factura (){
@@ -35,7 +35,7 @@ class Factura {
 
     #region SetGetNroFactura
     function setNro_Factura ($Nro_Factura){
-        $this->$Nro_Factura;
+        $this->Nro_Factura;
     }
 
     function getNro_Factura(){
@@ -45,7 +45,7 @@ class Factura {
 
     #region SetGetTotal
     function setTotal_Factura ($Total_Factura){
-        $this->$Total_Factura;
+        $this->Total_Factura;
     }
 
     function getTotal_Factura (){
@@ -55,7 +55,7 @@ class Factura {
 
     #region SetGetPersonaFK
     function setCod_PersonaFK ($Cod_PersonaFK){
-        $this->$Cod_PersonaFK;
+        $this->Cod_PersonaFK;
     }
     
     function getCod_PersonaFK (){

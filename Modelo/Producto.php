@@ -5,15 +5,15 @@ class Producto {
     private $Stock_Producto;
     private $VlrUnit_Producto;
 
-    function __construct($Cod_Producto, $Nombre_Producto, $Stock_Producto, $VlrUnit_Producto) {
-        $this->$Cod_Producto = $Cod_Producto;
-        $this->$Nombre_Producto = $Nombre_Producto;
-        $this->$Stock_Producto = $Stock_Producto;
-        $this->$VlrUnit_Producto = $VlrUnit_Producto;    
+    function __construct($Cod_Producto, $Nombre_Producto, $Stock_Producto, $VlrUnit_Producto){
+        $this->Cod_Producto = $Cod_Producto;
+        $this->Nombre_Producto = $Nombre_Producto;
+        $this->Stock_Producto = $Stock_Producto;
+        $this->VlrUnit_Producto = $VlrUnit_Producto;    
     }
     #region SetGetCódigo
     function setCod_Producto ($Cod_Producto){
-        $this->$Cod_Producto;
+        $this->Cod_Producto;
     }
 
     function getCod_Producto(){
@@ -23,7 +23,7 @@ class Producto {
 
     #region SetGetNombre
     function setNombre_Producto ($Nombre_Producto){
-        $this->$Nombre_Producto;
+        $this->Nombre_Producto;
     }
 
     function getNombre_Producto (){
@@ -33,7 +33,7 @@ class Producto {
 
     #region SetGetStock
     function setStock_Producto ($Stock_Producto){
-        $this->$Stock_Producto;
+        $this->Stock_Producto;
     }
 
     function getStock_Producto(){
@@ -43,12 +43,12 @@ class Producto {
 
     #region SetGetVlrUnitario
     function setVlrUnit_Producto ($VlrUnit_Producto){
-        $this->$VlrUnit_Producto;
+        $this->VlrUnit_Producto;
     }
 
     function getVlrUnit_Producto (){
         return $this->VlrUnit_Producto;
     }
-    #endregions
+    #endregion
 }
 ?>

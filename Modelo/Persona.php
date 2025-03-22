@@ -2,64 +2,52 @@
 class Persona {
     private $Cod_Persona;
     private $Email_Persona;
-    private $Nro_Factura;
     private $Nombre_Persona;
     private $Tel_Persona;
 
-    function __construct($Cod_Factura, $Fecha_Factura, $Nro_Factura, $Total_Factura, $Cod_PersonaFK) {
-        $this->$Cod_Factura = $Cod_Factura;
-        $this->$Fecha_Factura = $Fecha_Factura;
-        $this->$Nro_Factura = $Nro_Factura;
-        $this->$Total_Factura = $Total_Factura; 
-        $this->$Cod_PersonaFK = $Cod_PersonaFK;    
+    function __construct($Cod_Persona, $Email_Persona, $Nombre_Persona, $Tel_Persona) {
+        $this->Cod_Persona = $Cod_Persona;
+        $this->Email_Persona = $Email_Persona;
+        $this->Nombre_Persona = $Nombre_Persona; 
+        $this->Tel_Persona = $Tel_Persona;    
     }
     #region SetGetCodigo
-    function setCod_Factura ($Cod_Factura){
-        $this->$Cod_Factura;
+    function setCod_Persona ($Cod_Persona){
+        $this->Cod_Persona;
     }
 
-    function getCod_Factura(){
-        return $this->Cod_Factura;
-    }
-    #endregion
-
-    #region SetGetFecha
-    function setFecha_Factura ($Fecha_Factura){
-        $this->$Fecha_Factura;
-    }
-
-    function getFecha_Factura (){
-        return $this->Fecha_Factura;
+    function getCod_Persona(){
+        return $this->Cod_Persona;
     }
     #endregion
 
-    #region SetGetNroFactura
-    function setNro_Factura ($Nro_Factura){
-        $this->$Nro_Factura;
+    #region SetGetEmail
+    function setEmail_Persona ($Email_Persona){
+        $this->Email_Persona;
     }
 
-    function getNro_Factura(){
-        return $this->Nro_Factura;
-    }
-    #endregion
-
-    #region SetGetTotal
-    function setTotal_Factura ($Total_Factura){
-        $this->$Total_Factura;
-    }
-
-    function getTotal_Factura (){
-        return $this->Total_Factura;
+    function GetEmail_Persona (){
+        return $this->Email_Persona;
     }
     #endregion
 
-    #region SetGetPersonaFK
-    function setCod_PersonaFK ($Cod_PersonaFK){
-        $this->$Cod_PersonaFK;
+    #region SetGetNombre
+    function setNombre_Persona ($Nombre_Persona){
+        $this->Nombre_Persona;
+    }
+
+    function getNombre_Persona (){
+        return $this->Nombre_Persona;
+    }
+    #endregion
+
+    #region SetGetTelefono
+    function setTel_Persona ($Tel_Persona){
+        $this->Tel_Persona;
     }
     
-    function getCod_PersonaFK (){
-        return $this->Cod_PersonaFK;
+    function getTel_Persona (){
+        return $this->Tel_Persona;
     }
     #endregion
 }
