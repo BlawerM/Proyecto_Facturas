@@ -89,10 +89,13 @@
         }
 
         function modificar(){
-            $ema = $this->objUsuario->getEmail(); 
-            $con = $this->objUsuario->getContrasena();
+            $Cod_Factura = $this->Cod_Factura->getCod_Factura();
+            $Fecha_Factura = $this->Fecha_Factura->getFecha_Factura();
+            $Nro_Factura = $this->Nro_Factura->getNro_Factura();
+            $Total_Factura = $this->Total_Factura->getTotal_Factura();
+            $Cod_PersonaFK = $this->Cod_PersonaFK->getCod_PersonaFK();s
             
-            $comandoSql = "UPDATE usuario SET contrasena='$con' WHERE email = '$ema'";
+            $comandoSql = "UPDATE Factura SET Total_Factura='$Total_Factura' WHERE Cod_Factura = '$Cod_Factura'";
             $objControlConexion = new ControlConexion();
             $objControlConexion->abrirBd("localhost", "root","","bdejemplo", 3306);
             $objControlConexion->ejecutarComandoSql($comandoSql);
@@ -100,8 +103,8 @@
         }
 
         function borrar(){
-            $ema= $this->objUsuario->getEmail(); 
-            $comandoSql = "DELETE FROM usuario WHERE email = '$ema'";
+            $Cod_Factura = $this->Cod_Factura->getCod_Factura();
+            $comandoSql = "DELETE FROM Factura WHERE Cod_Factura = '$Cod_Factura'";
             $objControlConexion = new ControlConexion();
             $objControlConexion->abrirBd("localhost", "root","","bdejemplo", 3306);
             $objControlConexion->ejecutarComandoSql($comandoSql);
@@ -109,23 +112,23 @@
         }
 
         function listar(){
-            $comandoSql = "SELECT * FROM usuario";
+            $comandoSql = "SELECT * FROM Factura";
             $objControlConexion = new ControlConexion();
             $objControlConexion->abrirBd($GLOBALS['serv'], $GLOBALS['usua'], $GLOBALS['pass'], $GLOBALS['bdat'], $GLOBALS['port']);
             $recordSet = $objControlConexion->ejecutarSelect($comandoSql);
             if (mysqli_num_rows($recordSet) > 0) {
-                $arregloUsuarios = array();
+                $arregloFactura = array();
                 $i = 0;
                 while($row = $recordSet->fetch_array(MYSQLI_BOTH)){
-                    $objUsuario = new Usuario("","");
-                    $objUsuario->setEmail($row['email']);
-                    $objUsuario->setContrasena($row['contrasena']);
-                    $arregloUsuarios[$i] = $objUsuario;
+                    $objFactura = new Factura("","");
+                    $objFactura->getCod_Factura($row['Cod_Factura']);
+                    $objFactura->setNro_Factura($row['Nro_Factura']);
+                    $arregloFactura[$i] = $objFactura;
                     $i++;
                 }
             }
             $objControlConexion->cerrarBd();
-            return $arregloUsuarios;
+            return $arregloFactura;
         }
     }
 ?>
